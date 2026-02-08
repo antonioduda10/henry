@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora do Henry Felipe</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/henry-icon.png?v=1">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/henry-icon.png?v=1">
+    <link rel="apple-touch-icon" href="assets/img/henry-icon.png?v=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script defer src="assets/js/app.js"></script>
+</head>
+<body>
+    <main class="page">
+        <header class="hero">
+            <div class="hero__title">
+                <p class="hero__eyebrow">Calculadora do</p>
+                <h1 class="hero__name">
+                    <span class="hero__name-line hero__name-line--accent">Henry Felipe</span>
+                </h1>
+                <p class="hero__subtitle">Uma calculadora completa em homenagem ao Henry.</p>
+            </div>
+            <div class="hero__photos">
+                <figure class="photo-card">
+                    <img src="assets/img/henry-1.png" alt="Foto do Henry Felipe" />
+                    <figcaption>Henry Felipe, natal de 2025</figcaption>
+                </figure>
+                <figure class="photo-card">
+                    <img src="assets/img/henry-2.png" alt="Foto do Henry Felipe sorrindo" />
+                    <figcaption>Henry Felipe, natal de 2023</figcaption>
+                </figure>
+            </div>
+        </header>
+
+        <section class="calculator" aria-label="Calculadora do Henry Felipe">
+            <div class="calculator__screen">
+                <div class="screen__history" id="history">&nbsp;</div>
+                <div class="screen__current" id="current">0</div>
+            </div>
+
+            <div class="calculator__keys" role="group" aria-label="Teclado da calculadora">
+                <button class="key key--secondary" data-action="memory-clear">MC</button>
+                <button class="key key--secondary" data-action="memory-recall">MR</button>
+                <button class="key key--secondary" data-action="memory-add">M+</button>
+                <button class="key key--secondary" data-action="memory-subtract">M-</button>
+                <button class="key key--secondary" data-action="memory-store">MS</button>
+
+                <button class="key key--secondary" data-action="percent">%</button>
+                <button class="key key--secondary" data-action="clear-entry">CE</button>
+                <button class="key key--secondary" data-action="clear">C</button>
+                <button class="key key--secondary" data-action="backspace">⌫</button>
+
+                <button class="key key--secondary" data-action="reciprocal">1/x</button>
+                <button class="key key--secondary" data-action="square">x²</button>
+                <button class="key key--secondary" data-action="sqrt">√x</button>
+                <button class="key key--operator" data-action="operator" data-value="/">÷</button>
+
+                <button class="key" data-action="digit" data-value="7">7</button>
+                <button class="key" data-action="digit" data-value="8">8</button>
+                <button class="key" data-action="digit" data-value="9">9</button>
+                <button class="key key--operator" data-action="operator" data-value="*">×</button>
+
+                <button class="key" data-action="digit" data-value="4">4</button>
+                <button class="key" data-action="digit" data-value="5">5</button>
+                <button class="key" data-action="digit" data-value="6">6</button>
+                <button class="key key--operator" data-action="operator" data-value="-">−</button>
+
+                <button class="key" data-action="digit" data-value="1">1</button>
+                <button class="key" data-action="digit" data-value="2">2</button>
+                <button class="key" data-action="digit" data-value="3">3</button>
+                <button class="key key--operator" data-action="operator" data-value="+">+</button>
+
+                <button class="key" data-action="toggle-sign">±</button>
+                <button class="key" data-action="digit" data-value="0">0</button>
+                <button class="key" data-action="decimal">,</button>
+                <button class="key key--equals" data-action="equals">=</button>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>Feito com carinho para o Henry Felipe.</p>
+        </footer>
+    </main>
+</body>
+</html>
