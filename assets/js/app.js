@@ -297,8 +297,13 @@ function percent() {
   const currentValue = toNumber(state.entry);
   if (state.operator && state.previous !== null) {
     const base = Number(state.previous);
-    const result = (base * currentValue) / 100;
-    setCurrentFromValue(result);
+    const entryValue = (state.operator === "+" || state.operator === "-")
+      ? (base * currentValue) / 100
+      : currentValue / 100;
+    state.entry = formatNumber(entryValue).replace(".", ",");
+    state.overwrite = false;
+    updateCurrentFromEntry();
+    setDisplay();
   } else {
     const result = currentValue / 100;
     setCurrentFromValue(result);
