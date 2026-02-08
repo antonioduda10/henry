@@ -37,7 +37,17 @@
 
         <section class="calculator" aria-label="Calculadora do Henry Felipe">
             <div class="calculator__screen">
-                <div class="screen__history" id="history">&nbsp;</div>
+                <div class="screen__top">
+                    <div class="screen__memory" id="memory-indicators" aria-label="Memória ativa">
+                        <span class="memory-slot" data-mem="MS">MS</span>
+                        <span class="memory-slot" data-mem="M+">M+</span>
+                        <span class="memory-slot" data-mem="M-">M-</span>
+                        <span class="memory-slot" data-mem="MR">MR</span>
+                        <span class="memory-slot" data-mem="MC">MC</span>
+                        <span class="memory-count" id="memory-count"></span>
+                    </div>
+                    <div class="screen__history" id="history">&nbsp;</div>
+                </div>
                 <div class="screen__current" id="current">0</div>
             </div>
 
