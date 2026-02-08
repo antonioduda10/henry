@@ -31,9 +31,15 @@ function formatNumber(value) {
 
 function setDisplay() {
   currentEl.textContent = state.current;
-  historyEl.textContent = state.previous && state.operator
-    ? `${formatNumber(Number(state.previous)).replace(".", ",")} ${symbolForOperator(state.operator)}`
-    : "\u00A0";
+  if (state.previous && state.operator) {
+    const left = formatNumber(Number(state.previous)).replace(".", ",");
+    const right = state.overwrite ? "" : state.current;
+    historyEl.textContent = right
+      ? `${left} ${symbolForOperator(state.operator)} ${right}`
+      : `${left} ${symbolForOperator(state.operator)}`;
+  } else {
+    historyEl.textContent = "\u00A0";
+  }
 }
 
 function symbolForOperator(op) {
